@@ -14,6 +14,7 @@
 
 <body>
     <header>
+        <h1 class="Visualmente-escondido">Vidflow</h1>
         <div class="cabecalho__container">
             <a href="/" class="logo__item">
                 <img src="./img/modo_claro/vidflow-logo-light-mode.png" alt="Página inicial do VidFlow">
@@ -21,7 +22,7 @@
 
             <div class="cabecalho__pesquisar__item">
                 <form class="form__pesquisa">
-                    <input type="search" class="pesquisar__input" placeholder="Pesquisar">
+                    <input aria-label="Pesquisar vídeos" type="search" class="pesquisar__input" placeholder="Pesquisar">
 
                     <img src="./img/modo_claro/menu_superior/keyboard.svg" alt="" class="pesquisar__input-teclado">
                     
@@ -32,25 +33,25 @@
             </div>
 
             <div class="secao-links-e-botao-switch">
-                <ul class="cabecalho__links">
+                <ul aria-label="Links do cabeçalho" class="cabecalho__links">
                     <li>
-                        <a href="#" class="cabecalho__videos"></a>
+                        <a aria-label="Criar Vídeo" title="Criar Vídeo" href="#" class="cabecalho__videos"></a>
                     </li>
     
                     <li>
-                        <a href="#" class="cabecalho__apps"></a>
+                        <a aria-label="Aplicativos" title="Aplicativos" href="#" class="cabecalho__apps"></a>
                     </li>
     
                     <li>
-                        <a href="#" class="cabecalho__notificacoes"></a>
+                        <a aria-label="Notificações" title="Notificações" href="#" class="cabecalho__notificacoes"></a>
                     </li>
     
                     <li>
-                        <a href="#" class="cabecalho__avatar"></a>
+                        <a aria-label="Perfil de usuário" title="Perfil de usuário" href="#" class="cabecalho__avatar"></a>
                     </li>
                 </ul>
     
-                <label class="cabecalho__switch">
+                <label aria-label="Alternar modo escuro" title="Alternar modo escuro" class="cabecalho__switch">
                     <input type="checkbox" class="cabecalho__switch-input">
                     <span class="cabecalho__switch-slider"></span>
                 </label>
@@ -63,7 +64,7 @@
 
     <div class="menu__container-wrapper">
         <aside class="menu__container">
-            <section class="menu__secao">
+            <section aria-label="Áreas principais" class="menu__secao">
                 <ul class="menu__lista menu__links-principais">
                     <li>
                         <a class="menu__itens" href="#">
@@ -102,7 +103,7 @@
                 </ul>
             </section>
 
-            <section class="menu__secao">
+            <section aria-label="Links para vídeos guardados na conta" class="menu__secao">
                 <ul class="menu__lista">
                     <li>
                         <a class="menu__itens" href="#">
@@ -127,10 +128,10 @@
                 </ul>
             </section>
 
-            <section class="menu__secao">
-                <span class="menu__secao-titulo">Inscrições</span>
+            <section aria-labelledby="texto-inscricoes" class="menu__secao">
+                <span id="texto-inscricoes" class="menu__secao-titulo">Inscrições</span>
 
-                <ul class="menu__lista">
+                <ul id="menu_canais" class="menu__lista">
                     <li class="menu__canal">
                         <a class="menu__itens" href="#">
                             <i class="icone__alura"></i>
@@ -181,14 +182,14 @@
                     </li>
                 </ul>
 
-                <button class="menu__itens menu__botao-expandir-canais">
+                <button aria-expanded="false" aria-controls="menu_canais" class="menu__itens menu__botao-expandir-canais">
                     <i class="icone__mostrar"></i>
                     <span class="texto-colapsar-canais">Mostrar mais 2</span>
                 </button>
             </section>
 
-            <section class="menu__secao">
-                <span class="menu__secao-titulo">
+            <section aria-labelledby="titulo-mais-da-pagina" class="menu__secao">
+                <span id="titulo-mais-da-pagina" class="menu__secao-titulo">
                     Mais da página
                 </span>
 
@@ -216,47 +217,49 @@
     </div>
 
     <main>
-        <div class="superior__secao__container">
-            <button name="Tudo" class="botao-categoria selecionado">
+        <h2 class="visualmente-escondido">Seção de vídeos</h2>
+
+        <div role="tablist" class="superior__secao__container">
+            <button role="tab" aria-selected="false" name="Tudo" class="botao-categoria selecionado">
                 Tudo
             </button>
 
-            <button name="Debates" class="botao-categoria">
+            <button role="tab" aria-selected="false" name="Debates" class="botao-categoria">
                 Debates
             </button>
 
-            <button name="Ao Vivo" class="botao-categoria">
+            <button role="tab" aria-selected="false" name="Ao Vivo" class="botao-categoria">
                 Ao Vivo
             </button>
 
-            <button name="Podcasts" class="botao-categoria">
+            <button role="tab" aria-selected="false" name="Podcasts" class="botao-categoria">
                 Podcasts
             </button>
 
-            <button name="Front-end" class="botao-categoria">
+            <button role="tab" aria-selected="false" name="Front-end" class="botao-categoria">
                 Front-end
             </button>
 
-            <button name="Mobile" class="botao-categoria">
+            <button role="tab" aria-selected="false" name="Mobile" class="botao-categoria">
                 Mobile
             </button>
 
-            <button name="Data Science" class="botao-categoria">
+            <button role="tab" aria-selected="false" name="Data Science" class="botao-categoria">
                 Data Science
             </button>
 
-            <button name="Apps" class="botao-categoria">
+            <button role="tab" aria-selected="false" name="Apps" class="botao-categoria">
                 Apps
             </button>
 
-            <button name="Programação" class="botao-categoria">
+            <button role="tab" aria-selected="false" name="Programação" class="botao-categoria">
                 Programação
             </button>
 
-            <button name="Inteligência Artificial" class="botao-categoria">
+            <button role="tab" aria-selected="false" name="Inteligência Artificial" class="botao-categoria">
                 Inteligência Artificial
             </button>
-            <button name="Inovação" class="botao-categoria">
+            <button role="tab" aria-selected="false" name="Inovação" class="botao-categoria">
                 Inovação
             </button>
         </div>
